@@ -2,6 +2,7 @@
 
 # Autor: Adrián Sánchez Maestro
 # Uso: Este script lleva a cabo el preprocesado de las lecturas crudas procedentes de Illumina.
+# Programa usado: fastp (v1.3.6)
 
 # Rutas de trabajo
 workdir="${HOME}/Documentos/bioinformatics/master/tfm/data"
@@ -18,6 +19,10 @@ if [ ! -e "${archivos_r1[0]}" ]; then
     echo "Error: No se encontraron archivos fastq.gz en $reads_path"
     exit 1
 fi
+
+# Inicializar conda y activar entorno de trabajo
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate quality_control_short_reads
 
 for r1 in "${archivos_r1[@]}"; do
     # Extrae el nombre de la muestra
