@@ -4,7 +4,6 @@
 # Uso:   Este script es capaz de hacer un ensamblaje de novo con lecturas de Illumina curadas en modalidad
 #        de co-ensamblaje usando la herrramienta MEGAHIT. El script incorpora el paso de análisis de calidad
 #        usando metaQUAST.
-# Programas usados: MEGAHIT (v1.2.9) y metaQUAST (v5.3.0)
 
 # Inicialización de mamba (gestor de entornos y dependencias)
 source "$(conda info --base)/etc/profile.d/conda.sh"

@@ -2,7 +2,6 @@
 
 # Autor: Adrián Sánchez Maestro
 # Uso: Este script lleva a cabo el preprocesado de las lecturas crudas procedentes de Illumina.
-# Programa usado: fastp (v1.3.6)
 
 # Rutas de trabajo
 workdir="${HOME}/Documentos/bioinformatics/master/tfm/data"
@@ -12,10 +11,6 @@ qc_path="${workdir}/03-quality_control/fastp_processed"
 
 # Crear directorios de trabajo
 mkdir -p "$out_path" "$qc_path"
-
-# Activar conda y entorno de trabajo
-source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate quality_control_short_reads
 
 # Comprobación de seguridad
 archivos_r1=("$reads_path"/*_R1_001.fastq.gz)
