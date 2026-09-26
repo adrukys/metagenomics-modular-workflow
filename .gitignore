@@ -216,3 +216,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+
+# Datos de metagenómica
+*.fastq
+*.fastq.gz
+*.fasta
+*.fa
+*.bam
+*.sam
+*.csv
+*.tsv
