@@ -69,7 +69,7 @@ for bam_file in "${BAM}"/*.bam; do
     echo "${abund_file}" >> "${MAXBIN}/abund_list.txt"
 done
 
-# c. MaxBin2
+# c. Ejecutar MaxBin2
 run_MaxBin.pl -contig "${CONTIGS}" -out "${MAXBIN}/mb2" -abund_list "${MAXBIN}/abund_list.txt" -thread 16
 
 conda deactivate
@@ -87,7 +87,7 @@ conda activate binning_metabat2
 # b. Generar archivo de profundidad a partir de todos los BAM
 jgi_summarize_bam_contig_depths --outputDepth "${METABAT}/depth.txt" "${BAM}"/*.bam
 
-# 2. Ejecutar MetaBAT2
+# c. Ejecutar MetaBAT2
 metabat2 -i "${CONTIGS}" -a "${METABAT}/depth.txt" -o "${METABAT}/bin" -m 1500 -t 16
 
 conda deactivate
