@@ -11,7 +11,7 @@ import sys
 # a. Rutas de los archivos
 # ===================================
 workdir="/home/adruky/Documentos/bioinformatics/master/tfm"
-gtdbtk=f"{workdir}/data/18-gtdbtk_v3"
+gtdbtk=f"{workdir}/data/18-gtdbtk"
 results=f"{workdir}/results"
 
 # ===================================
