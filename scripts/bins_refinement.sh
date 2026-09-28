@@ -17,7 +17,7 @@ CHECKM2="${WORKDIR}/09-checkm2"
 DREP="${WORKDIR}/10-drep"
 QUAST="${WORKDIR}/11-quast_binning"
 
-# Creación de directirios
+# Creación de directorios
 mkdir -p "${DASTOOL}" "${CHECKM2}" "${DREP}" "${QUAST}"
 
 # Activación de conda
