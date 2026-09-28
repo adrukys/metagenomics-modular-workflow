@@ -2,7 +2,7 @@
 
 # Autor: Adrián Sánchez Maestro
 # Uso:   Este script clasifica la taxonomia de los MAGs obtenidos durante pasos anteriores.
-# Programas usados: gtdb-tk (v2.1.1)
+# Programas usados: gtdb-tk (v2.7.2)
 
 # Rutas de trabajo
 WORKDIR="${HOME}/Documentos/bioinformatics/master/tfm/data"
@@ -13,14 +13,11 @@ SCRATCH="${GTDBTK}/scratch"
 # Creación de directorios de salida
 mkdir -p "${GTDBTK}" "${SCRATCH}"
 
-# Definición de la ruta a la base de datos gtdbtk_r207
-export GTDBTK_DATA_PATH="${WORKDIR}/00-databases/gtdbtk_database/release_207_v2"
-
 # Inicialización de conda
 source $(conda info --base)/etc/profile.d/conda.sh
 
 # Activación del entorno de conda
-conda activate gtdbtk_r207
+conda activate gtdbtk_r232
 
 # GTDB-TK
 echo -e "\n---Iniciando clasificación taxonómica---\n"
