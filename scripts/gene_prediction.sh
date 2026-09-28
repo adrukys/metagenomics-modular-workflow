@@ -19,7 +19,7 @@ mkdir -p "${PRODIGAL}" "${CDHIT}"
 source $(conda info --base)/etc/profile.d/conda.sh
 
 # ==========================================
-# MÓDULO 1: metaProdigal
+# MÓDULO 1: Prodigal
 # ==========================================
 
 # Activación del entorno de conda
