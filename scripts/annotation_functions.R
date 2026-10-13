@@ -14,7 +14,7 @@ df <- read.delim("data/16-eggnog/genes_nitrogeno_final.tsv", header = TRUE, sep 
 
 # 3. Filtrar, agrupar y sumar TPMs por gen
 df_tpm <- df %>%
-  # Suponiendo que la columna del gen se llama "Preferred_name"
+  # La columna del gen se llama "Preferred_name"
   select(Preferred_name, contains("TPM")) %>%
   # Filtramos para quedarnos solo con los genes clave que hemos detectado
   filter(Preferred_name %in% c("nifH", "nifD", "nifK", "napA", "napB", "narH", "narI", "nirK", "nirS", "norB", "norC", "nosZ")) %>%
@@ -27,7 +27,7 @@ matriz <- as.matrix(df_tpm[, -1])
 rownames(matriz) <- df_tpm$Preferred_name
 
 # Limpiar los nombres de las columnas para el gráfico
-colnames(matriz) <- c("MBW", "PTW", "SBW", "SC1")
+colnames(matriz) <- c("MBW", "PTW", "SBW", "SC1") # Comprobar orden de las muestras previamente
 
 pdf("documents/imagenes/figura_10/heatmap_nitrogen.pdf", width = 8, height = 6)
 # 5. pheatmap
